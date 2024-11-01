@@ -4,14 +4,15 @@
   overflow: hidden;
   box-sizing: border-box;
   font-family: "Outfit", sans-serif;
+  font-size: 15px;
 }
 
 body {
   background-color: hsl(217, 54%, 11%);
 
   .nft-card {
-    width: 320px;
-    height: 500px;
+    width: 328px;
+    height: 544px;
 
     background-color: hsl(216, 50%, 16%);
     position: absolute;
@@ -21,30 +22,31 @@ body {
     border-radius: 15px;
     padding: 25px;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     box-shadow: 0px 5px 20px 20px rgba($color: hsl(216, 50%, 16%), $alpha: 0.3);
 
     .nft-card-image {
       width: 100%;
       height: fit-content;
 
-      overflow: hidden;
-
       img {
         width: 100%;
         height: fit-content;
         // margin-bottom: 20px;
-        border-radius: 10px;
+        border-radius: 8px;
       }
 
       .nft-card-image-overlay {
-        border-radius: 10px;
-        width: 100px;
-        height: 100px;
+        border-radius: 8px;
+        width: 279px;
+        height: 279px;
         background-color: rgba(255, 255, 255, 0);
-        background-color: wheat;
         position: absolute;
         z-index: 1;
-        top: 28px;
+        top: 26px;
       }
 
       .nft-card-image-overlay:hover {
@@ -66,6 +68,7 @@ body {
     }
 
     .nft-card-info {
+      margin-top: 20px;
       h1 {
         color: hsl(0, 0%, 100%);
         font-weight: 600;
@@ -81,8 +84,9 @@ body {
       .nft-card-detail {
         font-size: 16px;
         color: hsl(215, 51%, 70%);
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         font-weight: 300;
+        line-height: 1.5rem;
       }
 
       .nft-card-meta {

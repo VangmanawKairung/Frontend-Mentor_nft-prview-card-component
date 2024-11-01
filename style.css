@@ -4,14 +4,15 @@
   overflow: hidden;
   box-sizing: border-box;
   font-family: "Outfit", sans-serif;
+  font-size: 15px;
 }
 
 body {
   background-color: hsl(217, 54%, 11%);
 }
 body .nft-card {
-  width: 320px;
-  height: 500px;
+  width: 328px;
+  height: 544px;
   background-color: hsl(216, 50%, 16%);
   position: absolute;
   top: 50%;
@@ -19,29 +20,30 @@ body .nft-card {
   translate: -50% -50%;
   border-radius: 15px;
   padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   box-shadow: 0px 5px 20px 20px rgba(20, 37, 61, 0.3);
 }
 body .nft-card .nft-card-image {
   width: 100%;
   height: -moz-fit-content;
   height: fit-content;
-  overflow: hidden;
 }
 body .nft-card .nft-card-image img {
   width: 100%;
   height: -moz-fit-content;
   height: fit-content;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 body .nft-card .nft-card-image .nft-card-image-overlay {
-  border-radius: 10px;
-  width: 100px;
-  height: 100px;
+  border-radius: 8px;
+  width: 279px;
+  height: 279px;
   background-color: rgba(255, 255, 255, 0);
-  background-color: wheat;
   position: absolute;
   z-index: 1;
-  top: 28px;
+  top: 26px;
 }
 body .nft-card .nft-card-image .nft-card-image-overlay:hover {
   background-color: rgba(0, 255, 247, 0.5);
@@ -58,6 +60,9 @@ body .nft-card .nft-card-image .nft-card-image-overlay:hover::after {
   opacity: 1;
   z-index: 1000;
 }
+body .nft-card .nft-card-info {
+  margin-top: 20px;
+}
 body .nft-card .nft-card-info h1 {
   color: hsl(0, 0%, 100%);
   font-weight: 600;
@@ -71,8 +76,9 @@ body .nft-card .nft-card-info h1:hover {
 body .nft-card .nft-card-info .nft-card-detail {
   font-size: 16px;
   color: hsl(215, 51%, 70%);
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   font-weight: 300;
+  line-height: 1.5rem;
 }
 body .nft-card .nft-card-info .nft-card-meta {
   display: flex;
@@ -122,4 +128,4 @@ body .nft-card .nft-card-creator p span {
 body .nft-card .nft-card-creator p span:hover {
   color: hsl(178, 100%, 50%);
   cursor: pointer;
-}
+}/*# sourceMappingURL=style.css.map */
