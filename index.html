@@ -7,36 +7,59 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="source/images/favicon-32x32.png"
+      href="./sources/images/favicon-32x32.png"
     />
-    <title>Frontend Mentor | NFT preview card component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | NFT preview card component</title>
   </head>
   <body>
-    <div role="container">
-      <div class="product-image">
-        <div class="overlay"></div>
-      </div>
-      <div class="info">
-        <h1>Equilibrium #3429</h1>
-        <p class="detail">
+    <main class="nft-card" role="region" aria-labelledby="card-title">
+      <section class="nft-card-image">
+        <img
+          src="./sources/images/image-equilibrium.jpg"
+          alt="Equilibrium image"
+        />
+        <div class="nft-card-image-overlay"></div>
+      </section>
+      <section class="nft-card-info">
+        <h1 class="nft-card-title">Equilibrium #3429</h1>
+        <p class="nft-card-detail">
           Our Equilibrium collection promotes balance and calm.
         </p>
-        <div class="price-days">
-          <div class="price">
-            <img src="source/images/icon-ethereum.svg" alt="ethereum icon" />
+        <div class="nft-card-meta">
+          <div class="nft-card-price">
+            <img src="./sources/images/icon-ethereum.svg" alt="ethereum icon" />
             <p>0.041 ETH</p>
           </div>
-          <div class="days">
-            <img src="source/images/icon-clock.svg" alt="clock icon" />
+          <div class="nft-card-days-left">
+            <img src="./sources/images/icon-clock.svg" alt="clock icon" />
             <p>3 days left</p>
           </div>
         </div>
-      </div>
-      <div class="user">
-        <img src="source/images/image-avatar.png" alt="profile image" />
-        <p>Creation of <span>Jules Wyvern</span></p>
-      </div>
-    </div>
+      </section>
+      <footer class="nft-card-creator">
+        <img
+          src="./sources/images/image-avatar.png"
+          alt="profile image"
+          class="nft-card-avatar"
+        />
+        <p>
+          Creation of <span class="nft-card-creator-name">Jules Wyvern</span>
+        </p>
+      </footer>
+
+      <!-- <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Kairung Vangmanaw</a>.
+      </div> -->
+    </main>
   </body>
 </html>

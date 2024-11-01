@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Outfit:wght@300;400;600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +9,7 @@
 body {
   background-color: hsl(217, 54%, 11%);
 }
-body div[role=container] {
+body .nft-card {
   width: 320px;
   height: 500px;
   background-color: hsl(216, 50%, 16%);
@@ -22,25 +21,34 @@ body div[role=container] {
   padding: 25px;
   box-shadow: 0px 5px 20px 20px rgba(20, 37, 61, 0.3);
 }
-body div[role=container] .product-image {
+body .nft-card .nft-card-image {
   width: 100%;
-  height: 55%;
-  margin-bottom: 20px;
+  height: -moz-fit-content;
+  height: fit-content;
+  overflow: hidden;
+}
+body .nft-card .nft-card-image img {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
   border-radius: 10px;
-  background-image: url(source/images/image-equilibrium.jpg);
-  background-position: center;
-  background-size: cover;
 }
-body div[role=container] .overlay {
-  width: 100%;
-  height: 100%;
+body .nft-card .nft-card-image .nft-card-image-overlay {
+  border-radius: 10px;
+  width: 100px;
+  height: 100px;
   background-color: rgba(255, 255, 255, 0);
+  background-color: wheat;
+  position: absolute;
+  z-index: 1;
+  top: 28px;
 }
-body div[role=container] .overlay:hover {
+body .nft-card .nft-card-image .nft-card-image-overlay:hover {
   background-color: rgba(0, 255, 247, 0.5);
+  cursor: pointer;
 }
-body div[role=container] .overlay:hover::after {
-  content: url(source/images/icon-view.svg);
+body .nft-card .nft-card-image .nft-card-image-overlay:hover::after {
+  content: url(./sources/images/icon-view.svg);
   width: 100%;
   height: 100%;
   position: relative;
@@ -50,66 +58,68 @@ body div[role=container] .overlay:hover::after {
   opacity: 1;
   z-index: 1000;
 }
-body div[role=container] .info h1 {
+body .nft-card .nft-card-info h1 {
   color: hsl(0, 0%, 100%);
   font-weight: 600;
   font-size: 20px;
   margin-bottom: 10px;
 }
-body div[role=container] .info h1:hover {
+body .nft-card .nft-card-info h1:hover {
   color: hsl(178, 100%, 50%);
+  cursor: pointer;
 }
-body div[role=container] .info .detail {
+body .nft-card .nft-card-info .nft-card-detail {
   font-size: 16px;
   color: hsl(215, 51%, 70%);
   margin-bottom: 10px;
   font-weight: 300;
 }
-body div[role=container] .info .price-days {
+body .nft-card .nft-card-info .nft-card-meta {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-body div[role=container] .info .price-days .price,
-body div[role=container] .info .price-days .days {
+body .nft-card .nft-card-info .nft-card-meta .nft-card-price,
+body .nft-card .nft-card-info .nft-card-meta .nft-card-days-left {
   display: flex;
   align-items: center;
 }
-body div[role=container] .info .price-days .price {
+body .nft-card .nft-card-info .nft-card-meta .nft-card-price {
   color: hsl(178, 100%, 50%);
   font-weight: 400;
 }
-body div[role=container] .info .price-days .price img {
+body .nft-card .nft-card-info .nft-card-meta .nft-card-price img {
   padding-right: 10px;
 }
-body div[role=container] .info .price-days .days {
+body .nft-card .nft-card-info .nft-card-meta .nft-card-days-left {
   color: hsl(215, 51%, 70%);
   font-weight: 300;
 }
-body div[role=container] .info .price-days .days img {
+body .nft-card .nft-card-info .nft-card-meta .nft-card-days-left img {
   padding-right: 5px;
 }
-body div[role=container] .user {
+body .nft-card .nft-card-creator {
   display: flex;
   align-items: center;
   padding-top: 20px;
   margin-top: 20px;
   border-top: 1px solid hsl(215, 51%, 70%);
 }
-body div[role=container] .user img {
+body .nft-card .nft-card-creator img {
   width: 40px;
   height: 40px;
   border: 2px solid hsl(0, 0%, 100%);
   border-radius: 50%;
   margin-right: 20px;
 }
-body div[role=container] .user p {
+body .nft-card .nft-card-creator p {
   color: hsl(215, 51%, 70%);
   font-weight: 300;
 }
-body div[role=container] .user p span {
+body .nft-card .nft-card-creator p span {
   color: hsl(0, 0%, 100%);
 }
-body div[role=container] .user p span:hover {
+body .nft-card .nft-card-creator p span:hover {
   color: hsl(178, 100%, 50%);
+  cursor: pointer;
 }
