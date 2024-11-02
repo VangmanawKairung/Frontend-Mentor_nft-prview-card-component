@@ -9,10 +9,15 @@ This is a solution to the [NFT preview card component challenge on Frontend Ment
   - [Overview](#overview)
     - [The challenge](#the-challenge)
     - [Screenshot](#screenshot)
+      - [Mobile View](#mobile-view)
+      - [Desktop View](#desktop-view)
+      - [Active State](#active-state)
     - [Links](#links)
   - [My process](#my-process)
     - [Built with](#built-with)
     - [What I learned](#what-i-learned)
+    - [Continued development](#continued-development)
+    - [Useful resources](#useful-resources)
   - [Author](#author)
   - [Acknowledgments](#acknowledgments)
 
@@ -20,18 +25,20 @@ This is a solution to the [NFT preview card component challenge on Frontend Ment
 
 ### The challenge
 
-- Responsive website
+Users should be able to:
+
+- View the optimal layout depending on their device's screen size
+- See hover states for interactive elements
 
 ### Screenshot
+#### Mobile View
+![](./sources/screenshots/Mobile%20view.png)
 
-<details>
-<summary><strong>Mobile View</strong></summary>
-<img src="source/result/mobile.png">
-</details>
-<details>
-<summary><strong>Desktop View</strong></summary>
-<img src="source/result/desktop.png">
-</details>
+#### Desktop View
+![](./sources/screenshots/Desktop%20view.png)
+
+#### Active State
+![](./sources/screenshots/Active%20state.jpg)
 
 ### Links
 
@@ -43,19 +50,33 @@ This is a solution to the [NFT preview card component challenge on Frontend Ment
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- Sass/Scss
+- CSS custom properties (Variables)
+- Mobile-first workflow
+- Sass for Styling (SCSS)
+- Responsive Design
+- CSS Flexbox
+- Hover effects and active states
+- Google Fonts
+- Accessibility (ARIA attributes)
 
 ### What I learned
 
-- Content alignment
+Through this challenge, I’ve improved my skills in semantic HTML5, Sass for scalable styling, and creating responsive, mobile-first designs. I learned how to use Flexbox for layout, implement hover effects, and manage dynamic UI elements like overlays. This project helped me focus on writing clean, accessible, and responsive code for modern web development.
+
+### Continued development
+
+Moving forward, I can further develop my skills by focusing on more advanced CSS techniques like grid layouts and animations to create more complex, responsive designs. I can also dive deeper into accessibility features and improve my understanding of JavaScript to add more interactivity. Additionally, refining my use of version control systems like Git would help streamline collaboration and project management in future challenges.
+
+### Useful resources
+
+- [How TO - Overlay](https://www.w3schools.com/howto/howto_css_overlay.asp) - Guide me the way to create the overlay
+- [Two ways to create an image with a colour overlay in CSS](https://dev.to/ellen_dev/two-ways-to-achieve-an-image-colour-overlay-with-css-eio) - Guide me to create the overlay
 
 ## Author
 
 - Frontend Mentor - [@VangmanawKairung](https://www.frontendmentor.io/profile/VangmanawKairung)
-- GitHub - [VangmanawKairung](https://github.com/VangmanawKairung)
+- Website - [Kairung Vangmanaw](https://github.com/VangmanawKairung)
 
 ## Acknowledgments
 
-I appreciate to Frontend Mentor Team for spending the time to make this challenge.
+I want to thank Frontend Mentor for creating this insightful challenge that helped me improve my skills. I also appreciate all the useful resources available online, and special thanks to ChatGPT for guidance throughout the process. Previews on Mac were incredibly helpful for quick checks, and I’m grateful to everyone and every tool I’ve used, even those I may not have mentioned, for making this project a success.
