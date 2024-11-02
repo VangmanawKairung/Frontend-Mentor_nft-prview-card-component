@@ -1,151 +1,188 @@
+// Font
+$root-font-family: Outfit;
+$root-font-size: 15px;
+$root-font-weight: 300;
+
+// Color
+$white: hsl(0, 0%, 100%);
+$soft-blue: hsl(215, 51%, 70%);
+$cyan: hsl(178, 100%, 50%);
+$main-bg: hsl(217, 54%, 11%);
+$card-bg: hsl(216, 50%, 16%);
+$line: hsl(215, 32%, 27%);
+
 * {
   margin: 0;
   padding: 0;
   overflow: hidden;
   box-sizing: border-box;
-  font-family: "Outfit", sans-serif;
-  font-size: 15px;
+  font-family: $root-font-family;
+  font-size: $root-font-size;
+  font-weight: $root-font-weight;
+  color: $soft-blue;
+  letter-spacing: 0.01rem;
 }
 
 body {
-  background-color: hsl(217, 54%, 11%);
+  background-color: $main-bg;
 
-  .nft-card {
-    width: 328px;
-    height: 544px;
+  main {
+    width: 327px;
+    height: 543px;
 
-    background-color: hsl(216, 50%, 16%);
     position: absolute;
     top: 50%;
     left: 50%;
     translate: -50% -50%;
-    border-radius: 15px;
-    padding: 25px;
+
+    padding: 24px;
+    background: $card-bg;
+    border-radius: 10px;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
-    box-shadow: 0px 5px 20px 20px rgba($color: hsl(216, 50%, 16%), $alpha: 0.3);
+    box-shadow: 0px 5px 50px 50px rgba($color: black, $alpha: 0.1);
 
     .nft-card-image {
-      width: 100%;
-      height: fit-content;
-
       img {
         width: 100%;
         height: fit-content;
-        // margin-bottom: 20px;
         border-radius: 8px;
-      }
-
-      .nft-card-image-overlay {
-        border-radius: 8px;
-        width: 279px;
-        height: 279px;
-        background-color: rgba(255, 255, 255, 0);
-        position: absolute;
-        z-index: 1;
-        top: 26px;
-      }
-
-      .nft-card-image-overlay:hover {
-        background-color: rgba($color: hsl(178, 100%, 50%), $alpha: 0.5);
-        cursor: pointer;
-      }
-
-      .nft-card-image-overlay:hover::after {
-        content: url(./sources/images/icon-view.svg);
-        width: 100%;
-        height: 100%;
-        position: relative;
-        top: 40%;
-        left: 40%;
-        transform: translate(-50%, -50%);
-        opacity: 1;
-        z-index: 1000;
       }
     }
 
     .nft-card-info {
-      margin-top: 20px;
-      h1 {
-        color: hsl(0, 0%, 100%);
+      .nft-card-title {
+        font-size: 1.4rem;
         font-weight: 600;
-        font-size: 20px;
-        margin-bottom: 10px;
-      }
+        color: $white;
 
-      h1:hover {
-        color: hsl(178, 100%, 50%);
-        cursor: pointer;
+        margin-top: 5px;
+        margin-bottom: 15px;
       }
 
       .nft-card-detail {
-        font-size: 16px;
-        color: hsl(215, 51%, 70%);
-        margin-bottom: 20px;
-        font-weight: 300;
-        line-height: 1.5rem;
+        line-height: 1.7rem;
+        margin-bottom: 15px;
       }
 
       .nft-card-meta {
         display: flex;
         justify-content: space-between;
-        align-items: center;
 
         .nft-card-price,
         .nft-card-days-left {
           display: flex;
           align-items: center;
-        }
 
-        .nft-card-price {
-          color: hsl(178, 100%, 50%);
-          font-weight: 400;
           img {
-            padding-right: 10px;
+            height: fit-content;
+            margin-right: 7px;
           }
         }
 
-        .nft-card-days-left {
-          color: hsl(215, 51%, 70%);
-          font-weight: 300;
-          img {
-            padding-right: 5px;
+        .nft-card-price {
+          p {
+            color: $cyan;
+            font-weight: 400;
           }
         }
       }
     }
 
+    hr {
+      border: 1px solid $line;
+    }
+
     .nft-card-creator {
       display: flex;
       align-items: center;
-      padding-top: 20px;
-      margin-top: 20px;
-      border-top: 1px solid hsl(215, 51%, 70%);
 
       img {
-        width: 40px;
-        height: 40px;
-
-        border: 2px solid hsl(0, 0%, 100%);
+        width: 33px;
+        height: fit-content;
+        border: 1px solid $white;
         border-radius: 50%;
-        margin-right: 20px;
+
+        margin-right: 15px;
       }
 
       p {
-        color: hsl(215, 51%, 70%);
-        font-weight: 300;
-
         span {
-          color: hsl(0, 0%, 100%);
+          color: $white;
+        }
+      }
+    }
+
+    // Active State
+    .nft-card-image-overlay {
+      border-radius: 8px;
+      width: 278px;
+      height: 278px;
+      background-color: rgba(255, 255, 255, 0);
+      position: absolute;
+      z-index: 1;
+      top: 26px;
+    }
+
+    .nft-card-image-overlay:hover {
+      background-color: rgba($color: hsl(178, 100%, 50%), $alpha: 0.5);
+      cursor: pointer;
+    }
+
+    .nft-card-image-overlay:hover::after {
+      content: url(./sources/images/icon-view.svg);
+      width: 100%;
+      height: 100%;
+      position: relative;
+      top: 40%;
+      left: 40%;
+      transform: translate(-50%, -50%);
+      opacity: 1;
+      z-index: 1000;
+    }
+
+    .nft-card-info {
+      .nft-card-title:hover {
+        color: $cyan;
+      }
+    }
+
+    .nft-card-creator {
+      p span:hover {
+        color: $cyan;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  body {
+    main {
+      width: 350px;
+      height: 595px;
+      border-radius: 15px;
+
+      .nft-card-image-overlay {
+        width: 300px;
+        height: 300px;
+      }
+
+      .nft-card-info {
+        .nft-card-detail {
+          font-size: 18px;
+          margin-top: 20px;
+          margin-bottom: 20px;
         }
 
-        span:hover {
-          color: hsl(178, 100%, 50%);
-          cursor: pointer;
-        }
+        margin-bottom: 10px;
+      }
+
+      .nft-card-creator {
+        margin-bottom: 10px;
       }
     }
   }
